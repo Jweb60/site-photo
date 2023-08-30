@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { AioutlineMenu, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import {  AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 export default function Navbar() {
 
-    const[nav,SetNav] = useState(false);
+    const [nav,SetNav] = useState(false);
     const [color,setColor] = useState('transparent');
     const [textColor,setTextColor] = useState('white');
 
@@ -23,8 +23,8 @@ export default function Navbar() {
                 setColor('transparent')
                 setTextColor('white')
             }
-        }
-        window.addEventListener('scroll',changeColor)
+        };
+        window.addEventListener('scroll',changeColor);
     },[])
 
   return (
@@ -48,14 +48,17 @@ export default function Navbar() {
           </li>
         </ul>
 
+
+
         {/* Mobile Button */}
         <div onClick={handleNav} className='block sm:hidden z-10'>
           {nav ? (
-            <AiOutlineClose size={20} style={{ color: `${textColor}` }} />
+            <AiOutlineClose size={25} style={{ color: `${textColor}` }} />
           ) : (
-            <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />
+            <AiOutlineMenu size={25} style={{ color: `${textColor}` }} />
           )}
         </div>
+
 
         {/* Mobile Menu */}
         <div className={ nav ? 
