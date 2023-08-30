@@ -31,7 +31,7 @@ const Slider = ({ slides }) => {
             key={index}
             className={
               index === current
-                ? 'opacity-[1] ease-in duration-1000'
+                ? 'opacity-[1] ease duration-100'
                 : 'opacity-0'
             }
           >
@@ -44,9 +44,10 @@ const Slider = ({ slides }) => {
                 <Image
                   src={slide.image}
                   alt='/'
-                  width='1440'
-                  height='600'
-                  objectFit='cover'
+                  
+                  width={1440}
+                  height={600}
+                  
                 />
               )}
               <FaArrowCircleRight

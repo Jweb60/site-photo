@@ -34,16 +34,16 @@ export default function Navbar() {
           <h1 style={{color: `${textColor}`}} className="font-bold text-4xl">Captur</h1>
         </Link>
         <ul style={{color: `${textColor}`}} className="hidden sm:flex">
-          <li className="p-4">
+          <li onClick={handleNav} className="p-4">
             <Link href="/">Home</Link>
           </li>
-          <li className="p-4">
+          <li onClick={handleNav} className="p-4">
             <Link href="/#gallery">Gallery</Link>
           </li>
-          <li className="p-4">
-            <Link href="/portfolio">Work</Link>
+          <li onClick={handleNav} className="p-4">
+            <Link href="/works">Works</Link>
           </li>
-          <li className="p-4">
+          <li onClick={handleNav} className="p-4">
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
